@@ -1,47 +1,92 @@
-🎓 BolsaTech
+# 🎓 BolsaTech
 
-Seu caminho mais simples até a bolsa de estudos.
+**Seu caminho mais simples até a bolsa de estudos.**
+
 O BolsaTech ajuda estudantes a se inscreverem em editais de bolsas, como o programa Universidade Gratuita. Em um só lugar, você encontra editais abertos, descobre quais documentos precisa, envia tudo com conferência automática e acompanha o resultado.
 
-Tela inicial
+![Tela inicial](docs/screenshots/inicio-desktop.png)
 
-📌 Projeto acadêmico. Todas as instituições, editais e protocolos são fictícios. Nenhuma inscrição é enviada a instituições reais.
+> 📌 **Projeto acadêmico.** Todas as instituições, editais e protocolos são fictícios. Nenhuma inscrição é enviada a instituições reais.
 
-💡 Por que o BolsaTech existe
+---
+
+## 💡 Por que o BolsaTech existe
 
 Muita gente perde a bolsa por falta de informação: não sabe quais documentos cada instituição pede, onde conseguir cada um ou se o arquivo está do jeito certo. O resultado é prazo perdido, retrabalho e até desclassificação.
 
-O BolsaTech nasceu para resolver isso. A meta é que o estudante envie a documentação completa e correta e receba o protocolo da inscrição com tranquilidade.
+O BolsaTech nasceu para resolver isso. A meta é que o estudante envie a documentação **completa e correta** e receba o **protocolo** da inscrição com tranquilidade.
 
-✨ O que você pode fazer
+---
 
-🔎 Encontrar editais Busque instituições por nome, cidade ou forma de ingresso e veja na hora se o edital está aberto, encerrado ou ainda vai abrir.
+## ✨ O que você pode fazer
 
-✅ Saber o que falta Cada edital tem uma lista de documentos, separada entre obrigatórios e opcionais, com barra de progresso e o prazo sempre à vista.
+**🔎 Encontrar editais**
+Busque instituições por nome, cidade ou forma de ingresso e veja na hora se o edital está aberto, encerrado ou ainda vai abrir.
 
-📎 Enviar documentos sem medo Envie pelo computador, arrastando o arquivo ou tirando foto com o celular. O BolsaTech confere se o arquivo está legível e avisa antes de você enviar algo que poderia ser recusado.
+**✅ Saber o que falta**
+Cada edital tem uma lista de documentos, separada entre obrigatórios e opcionais, com barra de progresso e o prazo sempre à vista.
 
-🧩 Juntar PDFs Tem vários arquivos que precisam virar um só? Junte tudo na ordem que quiser.
+**📎 Enviar documentos sem medo**
+Envie pelo computador, arrastando o arquivo ou tirando foto com o celular. O BolsaTech confere se o arquivo está legível e avisa antes de você enviar algo que poderia ser recusado.
 
-🤖 Conversar com o assistente Tire dúvidas sobre os seus documentos e veja um resumo do que ainda precisa ser feito.
+**🧩 Juntar PDFs**
+Tem vários arquivos que precisam virar um só? Junte tudo na ordem que quiser.
 
-📬 Acompanhar tudo Depois de enviar, veja o andamento da inscrição, corrija apenas o documento que a instituição pediu e confira o resultado final.
+**🤖 Conversar com o assistente**
+Tire dúvidas sobre os seus documentos e veja um resumo do que ainda precisa ser feito.
 
-🧾 Receber o comprovante Ao concluir, você recebe o protocolo e um comprovante em PDF.
+**📬 Acompanhar tudo**
+Depois de enviar, veja o andamento da inscrição, corrija apenas o documento que a instituição pediu e confira o resultado final.
 
-🙋 Pedir ajuda Um botão de ajuda fica sempre no canto da tela. Passe o mouse para ver a mensagem "Precisa de ajuda?".
+**🧾 Receber o comprovante**
+Ao concluir, você recebe o protocolo e um comprovante em PDF.
 
-🤖 Sobre o assistente BolsaTech
+**🙋 Pedir ajuda**
+Um botão de ajuda fica sempre no canto da tela. Passe o mouse para ver a mensagem "Precisa de ajuda?".
 
-- O assistente conhece os documentos da sua inscrição e responde com base neles. Ele é acolhedor, direto e honesto: se não souber algo, orienta você a consultar o edital oficial em vez de inventar uma resposta.
+---
 
-Ele funciona quando o site está publicado no Claude. Em outros lugares, a tela mostra um resumo automático do seu checklist, para você nunca ficar sem saber o que falta.
+## 🤖 Sobre o assistente BolsaTech
 
-👩‍🎓 Conheça por dentro: conta de demonstração
+O assistente conhece os documentos da sua inscrição e responde com base neles. Ele é acolhedor, direto e honesto: se não souber algo, orienta você a consultar o edital oficial em vez de inventar uma resposta.
 
-Na tela de entrada, clique em "Entrar com a conta de demonstração". Você entra como a estudante Ana Souza, que já tem:
+Ele funciona quando o site está publicado no Claude. Em outros lugares, a tela mostra um **resumo automático** do seu checklist, para você nunca ficar sem saber o que falta.
+
+---
+
+## 👩‍🎓 Conheça por dentro: conta de demonstração
+
+Na tela de entrada, clique em **"Entrar com a conta de demonstração"**. Você entra como a estudante **Ana Souza**, que já tem:
 
 - uma inscrição em andamento, com 3 de 7 documentos enviados e 1 precisando de correção;
 - uma inscrição já enviada e em análise.
 
-Na tela de acompanhamento, o painel "Simular resposta da instituição" mostra como seria a análise, o pedido de correção, a aprovação e a recusa.
+Na tela de acompanhamento, o painel **"Simular resposta da instituição"** mostra como seria a análise, o pedido de correção, a aprovação e a recusa.
+
+---
+
+## 🚀 Como abrir
+
+1. Baixe a pasta do projeto.
+2. Abra o arquivo `index.html` no seu navegador.
+
+Pronto! Só é preciso estar conectado à internet para que as fontes e a conferência de PDFs carreguem direitinho.
+
+---
+
+## 🌱 Bom saber
+
+- Esta é uma **demonstração**: seus dados ficam guardados só no seu navegador, e nada vai para um servidor.
+- O progresso dos envios e as respostas das instituições são **simulados**.
+- O login serve para apresentar o projeto e não deve ser usado com senhas reais.
+- O site funciona no computador e no celular, tem modo claro e escuro e pode ser usado só com o teclado.
+
+---
+
+## 🛠️ Feito com
+
+HTML, CSS e JavaScript, com a biblioteca pdf-lib para trabalhar com PDFs e a fonte Plus Jakarta Sans.
+
+---
+
+<p align="center">Feito com carinho para que nenhuma bolsa se perca por falta de documento. 💙</p>
