@@ -4,7 +4,6 @@
 
 O BolsaTech ajuda estudantes a se inscreverem em editais de bolsas, como o programa Universidade Gratuita. Em um só lugar, você encontra editais abertos, descobre quais documentos precisa, envia tudo com conferência automática e acompanha o resultado.
 
-![Tela inicial](docs/screenshots/inicio-desktop.png)
 
 > 📌 **Projeto acadêmico.** Todas as instituições, editais e protocolos são fictícios. Nenhuma inscrição é enviada a instituições reais.
 
@@ -81,11 +80,6 @@ Pronto! Só é preciso estar conectado à internet para que as fontes e a confer
 - O login serve para apresentar o projeto e não deve ser usado com senhas reais.
 - O site funciona no computador e no celular, tem modo claro e escuro e pode ser usado só com o teclado.
 
----
-
-## 🛠️ Feito com
-
-HTML, CSS e JavaScript, com a biblioteca pdf-lib para trabalhar com PDFs e a fonte Plus Jakarta Sans.
 
 ---
 
