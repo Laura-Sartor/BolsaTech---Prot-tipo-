@@ -1,81 +1,48 @@
-# BolsaTech
+🎓 BolsaTech
 
-Plataforma web que ajuda estudantes a se inscreverem em editais de bolsas de estudo, como o programa Universidade Gratuita. Com ela, o estudante encontra editais abertos, organiza os documentos exigidos, envia os arquivos com pré-análise e acompanha o resultado.
+Seu caminho mais simples até a bolsa de estudos.
 
-> Projeto acadêmico. Todas as instituições, editais e protocolos são fictícios. Nenhuma inscrição é enviada a instituições reais.
+O BolsaTech ajuda estudantes a se inscreverem em editais de bolsas, como o programa Universidade Gratuita. Em um só lugar, você encontra editais abertos, descobre quais documentos precisa, envia tudo com conferência automática e acompanha o resultado.
 
-![Tela inicial](docs/screenshots/inicio-desktop.png)
+Tela inicial
 
-## O problema
+📌 Projeto acadêmico. Todas as instituições, editais e protocolos são fictícios. Nenhuma inscrição é enviada a instituições reais.
 
-Estudantes que concorrem a bolsas muitas vezes não sabem quais documentos cada instituição exige, onde obtê-los e se os arquivos estão no formato correto. O resultado é perda de prazos, retrabalho e até desclassificação por documentação incompleta ou inválida.
+💡 Por que o BolsaTech existe
 
-A dor principal está resolvida quando o estudante envia a documentação completa e validada e recebe o protocolo da inscrição.
+Muita gente perde a bolsa por falta de informação: não sabe quais documentos cada instituição pede, onde conseguir cada um ou se o arquivo está do jeito certo. O resultado é prazo perdido, retrabalho e até desclassificação.
 
-## Funcionalidades
+O BolsaTech nasceu para resolver isso. A meta é que o estudante envie a documentação completa e correta e receba o protocolo da inscrição com tranquilidade.
 
-- **Cadastro e login:** validação em tempo real, indicador de força da senha, aceite da LGPD, bloqueio temporário após 5 tentativas e recuperação de senha.
-- **Busca de instituições:** filtros por nome, cidade e forma de ingresso, com selo de edital aberto, encerrado ou ainda não aberto.
-- **Checklist de documentos:** lista por edital, separada entre obrigatórios e opcionais, com barra de progresso e prazo sempre visível.
-- **Envio de documentos:** upload por seleção, arrastar e soltar ou câmera do celular, com validação de formato (PDF, JPG ou PNG) e de tamanho (até 5 MB).
-- **Pré-análise documental:** detecta arquivo renomeado ou corrompido, PDF protegido por senha, quantidade de páginas incompatível, imagem em branco ou escura e resolução baixa.
-- **Documentos faltantes:** reúne o que falta enviar e o que precisa de correção em todas as inscrições.
-- **Assistente BolsaTech (IA):** resume o checklist do estudante, mostra os documentos faltantes e responde perguntas sobre eles.
-- **União de PDFs:** combina vários arquivos em um só, na ordem escolhida.
-- **Revisão final:** confirmação antes do envio definitivo, geração do protocolo e comprovante em PDF.
-- **Acompanhamento:** linha do tempo do processo, pendências com reenvio apenas do documento solicitado e resultado final (deferido ou indeferido).
-- **Estados da interface:** carregamento, erro, vazio, sucesso e sessão expirada.
+✨ O que você pode fazer
 
-| Checklist | Documentos faltantes | Celular |
-|---|---|---|
-| ![](docs/screenshots/checklist-desktop.png) | ![](docs/screenshots/faltantes-desktop.png) | ![](docs/screenshots/documento-mobile.png) |
+🔎 Encontrar editais Busque instituições por nome, cidade ou forma de ingresso e veja na hora se o edital está aberto, encerrado ou ainda vai abrir.
 
-## Como executar
+✅ Saber o que falta Cada edital tem uma lista de documentos, separada entre obrigatórios e opcionais, com barra de progresso e o prazo sempre à vista.
 
-O projeto é composto por arquivos estáticos (HTML, CSS e JavaScript), sem etapa de build.
+📎 Enviar documentos sem medo Envie pelo computador, arrastando o arquivo ou tirando foto com o celular. O BolsaTech confere se o arquivo está legível e avisa antes de você enviar algo que poderia ser recusado.
 
-1. Clone o repositório.
-2. Abra o arquivo `index.html` no navegador.
+🧩 Juntar PDFs Tem vários arquivos que precisam virar um só? Junte tudo na ordem que quiser.
 
-Para publicar no **GitHub Pages**, acesse *Settings > Pages*, escolha a branch `main` e a pasta `/ (root)`. O site ficará disponível em `https://<seu-usuario>.github.io/<nome-do-repositorio>/`.
+🤖 Conversar com o assistente Tire dúvidas sobre os seus documentos e veja um resumo do que ainda precisa ser feito.
 
-É preciso ter conexão com a internet para carregar a fonte (Google Fonts) e a biblioteca [pdf-lib](https://pdf-lib.js.org/), usada na pré-análise de PDFs, na união de arquivos e no comprovante.
+📬 Acompanhar tudo Depois de enviar, veja o andamento da inscrição, corrija apenas o documento que a instituição pediu e confira o resultado final.
 
-## Conta de demonstração
+🧾 Receber o comprovante Ao concluir, você recebe o protocolo e um comprovante em PDF.
 
-Na tela de login, clique em **"Entrar com a conta de demonstração"**. A conta da estudante Ana Souza já vem com:
+🙋 Pedir ajuda Um botão de ajuda fica sempre no canto da tela. Passe o mouse para ver a mensagem "Precisa de ajuda?".
 
-- uma inscrição em preenchimento, com 3 de 7 documentos enviados e 1 com pendência;
-- uma inscrição já enviada e em análise.
+🤖 Sobre o assistente BolsaTech
 
-Na tela de acompanhamento, o painel **"Simular resposta da instituição"** permite demonstrar a análise, o pedido de reenvio, o deferimento e o indeferimento.
+O assistente conhece os documentos da sua inscrição e responde com base neles. Ele é acolhedor, direto e honesto: se não souber algo, orienta você a consultar o edital oficial em vez de inventar uma resposta.
 
-## Sobre o assistente de IA
+Ele funciona quando o site está publicado no Claude. Em outros lugares, a tela mostra um resumo automático do seu checklist, para você nunca ficar sem saber o que falta.
 
-O assistente foi feito para rodar como artefato publicado no Claude (claude.ai). Nesse ambiente, ele usa o recurso de IA da plataforma, com autorização do usuário.
+👩‍🎓 Conheça por dentro: conta de demonstração
 
-Fora do Claude, por exemplo no GitHub Pages, a tela mostra o **resumo automático** do checklist, gerado por regras no próprio navegador, sem IA. Para ativar a IA fora do Claude, é preciso criar um pequeno back-end que chame uma API de IA. A chave da API nunca deve ficar no código do navegador. O ponto de integração é a função `getSample()` em `js/app.js`.
+Na tela de entrada, clique em "Entrar com a conta de demonstração". Você entra como a estudante Ana Souza, que já tem:
 
-## Limitações da demonstração
+uma inscrição em andamento, com 3 de 7 documentos enviados e 1 precisando de correção;
+uma inscrição já enviada e em análise.
 
-- **Sem servidor:** os dados ficam salvos apenas no navegador (`localStorage`). Os arquivos enviados podem ser pré-visualizados só na mesma sessão.
-- **Autenticação simulada:** a senha é guardada como hash no próprio navegador, o que serve apenas para demonstração e não é seguro para um sistema real.
-- **Simulações:** o progresso do upload e as respostas da instituição são simulados.
-
-## Estrutura
-
-```
-index.html                  Estrutura da página (HTML)
-css/styles.css              Estilos (CSS)
-js/app.js                   Lógica da aplicação (JavaScript)
-docs/requisitos.md          Requisitos funcionais e não funcionais
-docs/mapeamento-interface.md  Telas e pontos de mapeamento da interface
-docs/fluxo-usuario.mmd      Diagrama de fluxo do usuário (Mermaid)
-docs/screenshots/           Capturas de tela
-```
-
-O diagrama de fluxo pode ser visualizado em [mermaid.live](https://mermaid.live), colando o conteúdo de `docs/fluxo-usuario.mmd`.
-
-## Tecnologias
-
-HTML, CSS e JavaScript puro, em arquivos separados, com [pdf-lib](https://pdf-lib.js.org/) para manipulação de PDFs e a fonte Plus Jakarta Sans. A interface é responsiva (mobile-first), tem modo claro e escuro, navegação por teclado e status que combinam cor, ícone e texto.
+Na tela de acompanhamento, o painel "Simular resposta da instituição" mostra como seria a análise, o pedido de correção, a aprovação e a recusa.
