@@ -255,6 +255,25 @@ button.sr-only:focus-visible{position:fixed;top:8px;left:8px;width:auto;height:a
 
 /* checklist */
 .progress-card{position:relative}
+/* botão flutuante de suporte */
+.support-fab{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;display:inline-flex;align-items:center;justify-content:center;min-width:52px;height:52px;padding:0 14px;border:0;border-radius:999px;background:var(--blue);color:var(--on-blue);font:inherit;font-weight:650;font-size:.95rem;cursor:pointer;box-shadow:0 6px 20px rgba(19,41,75,.28);transition:background .15s,transform .15s,padding .25s ease}
+.support-fab:focus-visible{box-shadow:var(--focus),0 6px 20px rgba(19,41,75,.28)}
+.support-fab .ic{width:24px;height:24px}
+.support-fab span{display:inline-block;max-width:0;margin-left:0;opacity:0;overflow:hidden;white-space:nowrap;transition:max-width .25s ease,margin-left .25s ease,opacity .2s ease}
+.support-fab:focus-visible{padding:0 20px 0 14px}
+.support-fab:focus-visible span{max-width:180px;margin-left:8px;opacity:1}
+@media (hover:hover){
+  .support-fab:hover{background:var(--blue-h);transform:translateY(-2px);padding:0 20px 0 14px}
+  .support-fab:hover span{max-width:180px;margin-left:8px;opacity:1}
+}
+@media (max-width:959px){
+  body:has(.bottom-nav) .support-fab{bottom:calc(74px + env(safe-area-inset-bottom,0px))}
+  body.has-action-bar .support-fab{bottom:calc(150px + env(safe-area-inset-bottom,0px))}
+}
+.support-help{display:grid;gap:10px;margin:0 0 16px;padding:0;list-style:none}
+.support-help li{display:flex;gap:10px;align-items:flex-start;font-size:.92rem}
+.support-help .ic{margin-top:2px;color:var(--blue)}
+textarea.input{min-height:110px;resize:vertical;line-height:1.5}
 .sticky-dead{position:sticky;top:0;z-index:20;background:var(--bg);padding:10px 0;margin:-10px 0 6px}
 .doc-list{display:flex;flex-direction:column;gap:10px}
 .doc-row{display:grid;grid-template-columns:auto 1fr;gap:12px 14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px}
@@ -370,7 +389,7 @@ button.sr-only:focus-visible{position:fixed;top:8px;left:8px;width:auto;height:a
 .preview-box img{max-height:70vh;object-fit:contain}
 .preview-box object{width:100%;height:70vh}
 .toasts{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(76px + env(safe-area-inset-bottom,0px));z-index:120;display:grid;gap:8px;width:min(92vw,420px)}
-@media (min-width:960px){.toasts{bottom:24px;left:auto;right:24px;transform:none}}
+@media (min-width:960px){.toasts{bottom:24px;left:auto;right:88px;transform:none}}
 .toast{display:flex;gap:10px;align-items:flex-start;background:var(--navy);color:#fff;padding:12px 14px;border-radius:12px;font-size:.92rem;box-shadow:0 10px 30px rgba(0,0,0,.2)}
 :root[data-theme="dark"] .toast{background:#24365A}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .toast{background:#24365A}}
@@ -404,7 +423,7 @@ button.sr-only:focus-visible{position:fixed;top:8px;left:8px;width:auto;height:a
 .ai-form .input{flex:1;min-width:0}
 @media print{
   body{background:#fff}
-  .sidebar,.bottom-nav,.topbar,.demo-bar,.no-print,.toasts{display:none!important}
+  .sidebar,.bottom-nav,.topbar,.demo-bar,.no-print,.toasts,.support-fab{display:none!important}
   .shell{display:block}
   .page{padding:0}
   .receipt{border:0;box-shadow:none}

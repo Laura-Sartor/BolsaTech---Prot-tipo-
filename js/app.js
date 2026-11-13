@@ -56,6 +56,7 @@ const ICONS = {
   wifi: '<path d="M3 3l18 18M8.5 16a5 5 0 017 0M5 12.5a10 10 0 015.5-2.7M14.5 9.9A10 10 0 0119 12.5M12 19.5h.01"/>',
   doc2: '<path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/>',
   spark: '<path d="M12 3.5l1.9 5.1 5.1 1.9-5.1 1.9L12 17.5l-1.9-5.1L5 10.5l5.1-1.9z"/><path d="M18.5 15.5l.7 1.9 1.9.7-1.9.7-.7 1.9-.7-1.9-1.9-.7 1.9-.7z"/>',
+  chat: '<path d="M4 5.5h16v11H10l-4.5 3.7v-3.7H4z"/><path d="M8.5 9.5h7M8.5 12.5h4"/>',
   user: '<circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20a7.5 7.5 0 0115 0"/>'
 };
 const ic = (n, cls = "") => `<svg class="ic ${cls}" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${ICONS[n] || ""}</svg>`;
@@ -356,6 +357,26 @@ const ACTIONS = {
   },
   logout() { S.session = null; save(); toast("Você saiu da sua conta."); go("inicio"); },
   skip() { const m = $("#main"); if (m) { m.setAttribute("tabindex", "-1"); m.focus(); } },
+  suporte() {
+    const bg = openModal({ title: "Suporte BolsaTech", wide: false,
+      body: `<ul class="support-help">
+          <li>${ic("clock", "sm")}<span>Respondemos em até 1 dia útil.</span></li>
+          <li>${ic("file", "sm")}<span>Informe o edital e o documento em que está com dúvida, se houver.</span></li>
+        </ul>
+        <div class="field"><label for="sup-msg">Como podemos ajudar?</label>
+          <textarea id="sup-msg" class="input" maxlength="1000" placeholder="Descreva sua dúvida ou problema"></textarea>
+          <div class="field-error" id="sup-msg-e" role="alert"></div></div>
+        <p class="small muted" style="margin-top:12px">Demonstração: a mensagem não é enviada a ninguém.</p>`,
+      actions: [
+        { label: "Cancelar", cls: "btn-secondary", onClick: closeModal },
+        { label: "Enviar mensagem", cls: "btn-primary", onClick: () => {
+          const t = $("#sup-msg"), e = $("#sup-msg-e");
+          if (t.value.trim().length < 10) { t.setAttribute("aria-invalid", "true"); e.innerHTML = `${ic("alert")}<span>Escreva pelo menos 10 caracteres para a gente entender sua dúvida.</span>`; t.focus(); return; }
+          closeModal(); toast("Mensagem enviada. Retornaremos em breve.");
+        } }
+      ] });
+    const t = $("#sup-msg", bg); t && t.focus();
+  },
   como() { const el = $("#como"); el && el.scrollIntoView({ behavior: "smooth" }); },
   edLink() { openModal({ title: "Edital oficial", body: `<p>Nesta demonstração o link é ilustrativo. No sistema real, o edital oficial abriria no site da instituição, em uma nova aba.</p>`, actions: [{ label: "Entendi", cls: "btn-primary", onClick: closeModal }] }); }
 };
@@ -1402,6 +1423,13 @@ VIEWS.faltantes = (p, q) => {
 };
 
 /* ========= Inicialização ========= */
+(function mountSupportFab() {
+  const b = document.createElement("button");
+  b.type = "button"; b.className = "support-fab no-print"; b.dataset.act = "suporte";
+  b.setAttribute("aria-label", "Precisa de ajuda?");
+  b.innerHTML = `${ic("chat")}<span>Precisa de ajuda?</span>`;
+  document.body.appendChild(b);
+})();
 getDownloads().then(d => { if (!d && window.claude) document.body.classList.add("no-downloads"); });
 getSample();
 if (!location.hash) location.replace("#/inicio");
